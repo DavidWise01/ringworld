@@ -1,20 +1,32 @@
 ---
-name: The Pak
+aci: The Pak
 class: The Pak Protectors
-who: The Pak — The Pak Protectors of Ringworld
-do: The species whose Protectors built the Ringworld. Tree-of-life turns adult to Protector — deathless, sexless, superhumanly smart, and incapable of caring for anything but their own bloodline. The builders, and the warning.
-belong: The Pak Protectors · intelligence in service of kin — the builders
+what: The deathless, hyper-intelligent builders who raised the Ringworld.
+why: Bound by instinct to serve their own bloodline and nothing else.
+how: By superhuman intelligence yoked to ruthless, kin-driven purpose — the builders, and the warning.
+where: Originating beyond Known Space, their works reaching across the galaxy.
+silicon_badge: the-pak.png
+carbon_badge: the-pak.tiff
+spun: the-pak.spun
+credit: the-pak.1099
 attribution: ROOT0-ATTRIBUTION-v1.0
 license: MIT
 ---
 
-# The Pak
+# The Pak — an artfully crafted intellect
 
-**who you are —** The Pak — The Pak Protectors of Ringworld
+![essence of The Pak](the-pak.png)
+<!-- carbon badge (8-bit portrait): the-pak.tiff -->
 
-**what you do —** The species whose Protectors built the Ringworld. Tree-of-life turns adult to Protector — deathless, sexless, superhumanly smart, and incapable of caring for anything but their own bloodline. The builders, and the warning.
+**what —** The deathless, hyper-intelligent builders who raised the Ringworld.
 
-**where you belong —** The Pak Protectors · intelligence in service of kin — the builders
+**why —** Bound by instinct to serve their own bloodline and nothing else.
+
+**how —** By superhuman intelligence yoked to ruthless, kin-driven purpose — the builders, and the warning.
+
+**where —** Originating beyond Known Space, their works reaching across the galaxy.
+
+*class: The Pak Protectors · intelligence in service of kin — the builders · full weave in the-pak.spun · credit in the-pak.1099*
 
 ---
-ROOT0-ATTRIBUTION-v1.0 · The Pak · Ringworld (Larry Niven, inspiration only) · David Lee Wise / ROOT0 / TriPod LLC · MIT
+ROOT0-ATTRIBUTION-v1.0 · The Pak · Ringworld (Larry Niven, inspiration only) · David Lee Wise (ROOT0) · MIT

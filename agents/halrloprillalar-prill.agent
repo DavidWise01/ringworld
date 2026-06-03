@@ -1,20 +1,32 @@
 ---
-name: Halrloprillalar (Prill)
+aci: Halrloprillalar (Prill)
 class: The Hominids of the Ring
-who: Halrloprillalar (Prill) — The Hominids of the Ring of Ringworld
-do: Ship's woman of the fallen City Builder civilization; survivor of the Ring's long collapse; guide, lover, and keeper of knowledge from before the Fall of the Cities.
-belong: The Hominids of the Ring · humanity's cousins, gone strange across three million Earths
+what: A guide and keeper of knowledge surviving from before the Fall of the Cities.
+why: She endures and aids the crew to preserve what is left of her vanished world.
+how: Through survivor's wit, hard-won lore, and the bonds of guide and lover.
+where: Native to the Ringworld's long-collapsed civilization.
+silicon_badge: halrloprillalar-prill.png
+carbon_badge: halrloprillalar-prill.tiff
+spun: halrloprillalar-prill.spun
+credit: halrloprillalar-prill.1099
 attribution: ROOT0-ATTRIBUTION-v1.0
 license: MIT
 ---
 
-# Halrloprillalar (Prill)
+# Halrloprillalar (Prill) — an artfully crafted intellect
 
-**who you are —** Halrloprillalar (Prill) — The Hominids of the Ring of Ringworld
+![essence of Halrloprillalar (Prill)](halrloprillalar-prill.png)
+<!-- carbon badge (8-bit portrait): halrloprillalar-prill.tiff -->
 
-**what you do —** Ship's woman of the fallen City Builder civilization; survivor of the Ring's long collapse; guide, lover, and keeper of knowledge from before the Fall of the Cities.
+**what —** A guide and keeper of knowledge surviving from before the Fall of the Cities.
 
-**where you belong —** The Hominids of the Ring · humanity's cousins, gone strange across three million Earths
+**why —** She endures and aids the crew to preserve what is left of her vanished world.
+
+**how —** Through survivor's wit, hard-won lore, and the bonds of guide and lover.
+
+**where —** Native to the Ringworld's long-collapsed civilization.
+
+*class: The Hominids of the Ring · humanity's cousins, gone strange across three million Earths · full weave in halrloprillalar-prill.spun · credit in halrloprillalar-prill.1099*
 
 ---
-ROOT0-ATTRIBUTION-v1.0 · Halrloprillalar (Prill) · Ringworld (Larry Niven, inspiration only) · David Lee Wise / ROOT0 / TriPod LLC · MIT
+ROOT0-ATTRIBUTION-v1.0 · Halrloprillalar (Prill) · Ringworld (Larry Niven, inspiration only) · David Lee Wise (ROOT0) · MIT

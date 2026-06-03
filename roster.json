@@ -3,12 +3,24 @@
   "subtitle": "Known Space — sorted not by morality but by species",
   "author": "Larry Niven",
   "premise": "A band of matter a million miles wide and six hundred million long, spun around a sun for gravity. Three million times the surface of the Earth. Built by Pak Protectors, found by a tourist, a coward, a warrior, and a woman bred for luck. The 90° pivot: this roll sorts the cast by kind — for in Known Space, biology is destiny — and sets the artifact itself apart, because the idea is the hero.",
-  "note": "The full Ringworld tetralogy (1970–2004) sorted by species, with the Ringworld set apart as the artifact-protagonist. The Fleet of Worlds prequels (with Edward M. Lerner) sit alongside as companion Known Space. roster.json is the source of truth; characters by Larry Niven, inspiration only.",
+  "note": "The full Ringworld tetralogy (1970–2004) sorted by species, with the Ringworld set apart as the artifact-protagonist. The Fleet of Worlds prequels (with Edward M. Lerner) sit alongside as companion Known Space. roster.json is the source of truth; characters by Larry Niven, inspiration only. Every ACI now carries the full DLW tag with an authored six-W .spun.",
   "lineage": [
-    { "t": "Ringworld",              "y": 1970 },
-    { "t": "The Ringworld Engineers","y": 1980 },
-    { "t": "The Ringworld Throne",   "y": 1996 },
-    { "t": "Ringworld's Children",   "y": 2004 }
+    {
+      "t": "Ringworld",
+      "y": 1970
+    },
+    {
+      "t": "The Ringworld Engineers",
+      "y": 1980
+    },
+    {
+      "t": "The Ringworld Throne",
+      "y": 1996
+    },
+    {
+      "t": "Ringworld's Children",
+      "y": 2004
+    }
   ],
   "specs": {
     "width": "~1,000,000 miles",
@@ -20,25 +32,181 @@
     "material": "scrith — tensile strength near the strong nuclear force"
   },
   "classes": [
-    { "id": "humanity",   "label": "Humanity",            "spec": "Sol's wanderers — and the luck they were bred for", "color": "#2f6fb0", "ink": "#fff" },
-    { "id": "puppeteers", "label": "Pierson's Puppeteers","spec": "cowardice raised to statecraft",     "color": "#c9a227", "ink": "#1a1a1a" },
-    { "id": "kzinti",     "label": "The Kzinti",          "spec": "aggression as a species strategy",   "color": "#b5481f", "ink": "#fff" },
-    { "id": "pak",        "label": "The Pak Protectors",  "spec": "intelligence in service of kin — the builders", "color": "#5a6e3a", "ink": "#fff" },
-    { "id": "hominids",   "label": "The Hominids of the Ring", "spec": "humanity's cousins, gone strange across three million Earths", "color": "#8a6a4a", "ink": "#fff" },
-    { "id": "artifact",   "label": "The Ringworld",       "spec": "the artifact · the real protagonist", "color": "#9fb8d8", "ink": "#0a0f18" }
+    {
+      "id": "humanity",
+      "label": "Humanity",
+      "spec": "Sol's wanderers — and the luck they were bred for",
+      "color": "#2f6fb0",
+      "ink": "#fff"
+    },
+    {
+      "id": "puppeteers",
+      "label": "Pierson's Puppeteers",
+      "spec": "cowardice raised to statecraft",
+      "color": "#c9a227",
+      "ink": "#1a1a1a"
+    },
+    {
+      "id": "kzinti",
+      "label": "The Kzinti",
+      "spec": "aggression as a species strategy",
+      "color": "#b5481f",
+      "ink": "#fff"
+    },
+    {
+      "id": "pak",
+      "label": "The Pak Protectors",
+      "spec": "intelligence in service of kin — the builders",
+      "color": "#5a6e3a",
+      "ink": "#fff"
+    },
+    {
+      "id": "hominids",
+      "label": "The Hominids of the Ring",
+      "spec": "humanity's cousins, gone strange across three million Earths",
+      "color": "#8a6a4a",
+      "ink": "#fff"
+    },
+    {
+      "id": "artifact",
+      "label": "The Ringworld",
+      "spec": "the artifact · the real protagonist",
+      "color": "#9fb8d8",
+      "ink": "#0a0f18"
+    }
   ],
   "members": [
-    { "name": "Louis Wu",            "class": "humanity", "specialty": "Two hundred years old and bored of it; explorer, peacemaker, the man who has seen everything and goes anyway. The eyes through which we see the Ring — curious, decent, and a little tired of being right." },
-    { "name": "Teela Brown",         "class": "humanity", "specialty": "Bred from generations of Birthright-lottery winners to be lucky — luck so total it is not a gift to her but to the universe. On the Ring it stops protecting her and starts using her." },
-    { "name": "Nessus",              "class": "puppeteers", "specialty": "The Puppeteer who organized the expedition; clinically 'insane' among his kind — which is to say, brave enough to leave the Fleet. Two heads, three legs, and a galaxy of schemes." },
-    { "name": "The Hindmost",        "class": "puppeteers", "specialty": "Leader-in-exile of the Puppeteers; rides the Ring's edge pulling strings from safety; cowardice perfected into survival and statecraft. (His kind bred human luck itself.)" },
-    { "name": "Speaker-to-Animals (Chmeee)", "class": "kzinti", "specialty": "A Kzin diplomat-warrior — the rank is an insult — fierce and honorable in his fashion. On the Ring he earns a full name, Chmeee: the rarest honor among the felines who lost four wars to monkeys." },
-    { "name": "The Patriarchy",      "class": "kzinti", "specialty": "The Kzinti empire: orange-furred, eight-foot, ruled by appetite and the Patriarch; tempered only by the wars it kept starting and losing." },
-    { "name": "Tunesmith",           "class": "pak", "specialty": "The Ringworld Protector of the Children era; the engineer-mind that takes the failing Ring's fate in hand — cold, brilliant, and utterly beyond human scale." },
-    { "name": "The Pak",            "class": "pak", "specialty": "The species whose Protectors built the Ringworld. Tree-of-life turns adult to Protector — deathless, sexless, superhumanly smart, and incapable of caring for anything but their own bloodline. The builders, and the warning." },
-    { "name": "Halrloprillalar (Prill)", "class": "hominids", "specialty": "Ship's woman of the fallen City Builder civilization; survivor of the Ring's long collapse; guide, lover, and keeper of knowledge from before the Fall of the Cities." },
-    { "name": "The Night People (Ghouls)", "class": "hominids", "specialty": "Eaters of the dead, and the Ring's hidden information network. Ugly, essential, and far wiser than they look — the species that actually runs the place." },
-    { "name": "The Breeds of the Ring", "class": "hominids", "specialty": "A thousand hominid species evolved across three million Earths — Machine People, Hanging People, Grass Giants, Vampires, Reds — humanity's cousins, each gone strange in its own long isolation." },
-    { "name": "The Ringworld",       "class": "artifact", "specialty": "The artifact, and the real protagonist: a ribbon of scrith a million miles wide and six hundred million long, spun around a star for gravity, with shadow squares for night and rim walls a thousand miles high. Three million times the surface of the Earth, built by Pak Protectors, failing slowly — and worth an entire genre of wonder. The idea is the hero." }
+    {
+      "name": "Louis Wu",
+      "class": "humanity",
+      "specialty": "Two hundred years old and bored of it; explorer, peacemaker, the man who has seen everything and goes anyway. The eyes through which we see the Ring — curious, decent, and a little tired of being right.",
+      "who": "A two-hundred-year-old human of Sol, kept young by boosterspice and worn smooth by experience.",
+      "what": "The expedition's explorer and reluctant peacemaker, the viewpoint through which the Ring is seen.",
+      "where": "Born of Known Space, he walks the Ringworld's vast inner surface as a wandering guest.",
+      "why": "He goes because boredom is unbearable and curiosity is the one appetite age has not dulled.",
+      "when": "From the first crossing in 1970 through the artifact's long crisis decades later.",
+      "how": "By staying curious, decent, and quietly right while everyone around him schemes."
+    },
+    {
+      "name": "Teela Brown",
+      "class": "humanity",
+      "specialty": "Bred from generations of Birthright-lottery winners to be lucky — luck so total it is not a gift to her but to the universe. On the Ring it stops protecting her and starts using her.",
+      "who": "A young human woman bred from generations of Birthright-lottery winners to embody luck itself.",
+      "what": "The crew's living talisman, whose fortune steers events more than her own will.",
+      "where": "Carried from Known Space onto the Ring, where her luck changes character.",
+      "why": "She is drawn along by a luck that serves the universe's purposes rather than her own.",
+      "when": "Across the first expedition, where her gift stops shielding her and begins using her.",
+      "how": "Not by choice or skill but by improbable fortune bending the world around her."
+    },
+    {
+      "name": "Nessus",
+      "class": "puppeteers",
+      "specialty": "The Puppeteer who organized the expedition; clinically 'insane' among his kind — which is to say, brave enough to leave the Fleet. Two heads, three legs, and a galaxy of schemes.",
+      "who": "A Pierson's puppeteer — two-headed, three-legged, herbivorous — judged insane by his own kind.",
+      "what": "The organizer and financier who assembled the expedition to the Ring.",
+      "where": "An agent of the hidden puppeteer Fleet of Worlds, venturing far beyond it.",
+      "why": "His 'madness' is courage enough to leave the herd and serve a larger puppeteer design.",
+      "when": "At the founding of the first expedition, recruiting and steering its members.",
+      "how": "Through layered schemes, hidden manipulation, and a coward's careful daring."
+    },
+    {
+      "name": "The Hindmost",
+      "class": "puppeteers",
+      "specialty": "Leader-in-exile of the Puppeteers; rides the Ring's edge pulling strings from safety; cowardice perfected into survival and statecraft. (His kind bred human luck itself.)",
+      "who": "A Pierson's puppeteer of the highest rank, leader-in-exile of his people.",
+      "what": "The strategist who pulls strings from safety while others take the risks.",
+      "where": "Riding the Ring's edge and his own vessel, tethered to puppeteer interests.",
+      "why": "He acts to preserve himself and his species, cowardice refined into statecraft.",
+      "when": "Through the later expeditions, when the Ring's survival is in question.",
+      "how": "By manipulation from a distance, trading safety for control — his kind bred human luck itself."
+    },
+    {
+      "name": "Speaker-to-Animals (Chmeee)",
+      "class": "kzinti",
+      "specialty": "A Kzin diplomat-warrior — the rank is an insult — fierce and honorable in his fashion. On the Ring he earns a full name, Chmeee: the rarest honor among the felines who lost four wars to monkeys.",
+      "who": "A Kzin — orange-furred, fanged, eight feet of feline predator — bearing a deliberately demeaning diplomatic title.",
+      "what": "The expedition's warrior and envoy, fierce and honorable by his own code.",
+      "where": "Sent from the Patriarchy into Known Space and onto the Ring.",
+      "why": "He seeks honor and standing for a species humbled by repeated defeat.",
+      "when": "On the early expeditions, where his deeds earn him a true name.",
+      "how": "Through controlled ferocity, courage, and the discipline to win his full name, Chmeee."
+    },
+    {
+      "name": "The Patriarchy",
+      "class": "kzinti",
+      "specialty": "The Kzinti empire: orange-furred, eight-foot, ruled by appetite and the Patriarch; tempered only by the wars it kept starting and losing.",
+      "who": "The Kzinti — a species of eight-foot orange-furred carnivores ruled by appetite.",
+      "what": "A warrior empire organized for conquest under its Patriarch.",
+      "where": "A power of Known Space, pressing outward against humanity and others.",
+      "why": "Driven by an aggression bred into the species as a strategy for dominance.",
+      "when": "Across the long history of the Man-Kzin wars and after.",
+      "how": "By starting wars it could not win, tempered only by the defeats that followed."
+    },
+    {
+      "name": "Tunesmith",
+      "class": "pak",
+      "specialty": "The Ringworld Protector of the Children era; the engineer-mind that takes the failing Ring's fate in hand — cold, brilliant, and utterly beyond human scale.",
+      "who": "A Pak Protector arisen on the Ring — sexless, deathless, of inhuman intellect.",
+      "what": "The engineer-mind who takes the failing Ring's fate into his hands.",
+      "where": "Native to the Ringworld in its era of crisis.",
+      "why": "Compelled by Protector instinct to safeguard those he claims as his charges.",
+      "when": "During the Children era, as the artifact's survival hangs in the balance.",
+      "how": "Through cold, vast engineering brilliance operating beyond human scale."
+    },
+    {
+      "name": "The Pak",
+      "class": "pak",
+      "specialty": "The species whose Protectors built the Ringworld. Tree-of-life turns adult to Protector — deathless, sexless, superhumanly smart, and incapable of caring for anything but their own bloodline. The builders, and the warning.",
+      "who": "The Pak — a humanoid species whose adults transform via tree-of-life into Protectors.",
+      "what": "The deathless, hyper-intelligent builders who raised the Ringworld.",
+      "where": "Originating beyond Known Space, their works reaching across the galaxy.",
+      "why": "Bound by instinct to serve their own bloodline and nothing else.",
+      "when": "In the deep past as builders, and ever after as a standing warning.",
+      "how": "By superhuman intelligence yoked to ruthless, kin-driven purpose — the builders, and the warning."
+    },
+    {
+      "name": "Halrloprillalar (Prill)",
+      "class": "hominids",
+      "specialty": "Ship's woman of the fallen City Builder civilization; survivor of the Ring's long collapse; guide, lover, and keeper of knowledge from before the Fall of the Cities.",
+      "who": "A hominid woman of the fallen City Builder civilization, a ship's woman of the old order.",
+      "what": "A guide and keeper of knowledge surviving from before the Fall of the Cities.",
+      "where": "Native to the Ringworld's long-collapsed civilization.",
+      "why": "She endures and aids the crew to preserve what is left of her vanished world.",
+      "when": "Met during the early exploration, a living link to the Ring's lost height.",
+      "how": "Through survivor's wit, hard-won lore, and the bonds of guide and lover."
+    },
+    {
+      "name": "The Night People (Ghouls)",
+      "class": "hominids",
+      "specialty": "Eaters of the dead, and the Ring's hidden information network. Ugly, essential, and far wiser than they look — the species that actually runs the place.",
+      "who": "A hominid species of the Ring, eaters of the dead, ugly and underestimated.",
+      "what": "The hidden information network that quietly keeps the Ring running.",
+      "where": "Spread across the whole inner surface of the Ringworld.",
+      "why": "They trade in the dead and in knowledge to sustain order among the breeds.",
+      "when": "Present throughout the saga as the Ring's unseen connective tissue.",
+      "how": "By gathering and passing word across the world — far wiser than they look."
+    },
+    {
+      "name": "The Breeds of the Ring",
+      "class": "hominids",
+      "specialty": "A thousand hominid species evolved across three million Earths — Machine People, Hanging People, Grass Giants, Vampires, Reds — humanity's cousins, each gone strange in its own long isolation.",
+      "who": "A thousand hominid species — humanity's cousins gone strange across three million Earths.",
+      "what": "The diverse evolved peoples who populate the Ring's endless landscape.",
+      "where": "Scattered across the Ringworld's countless isolated regions.",
+      "why": "Each shaped by long isolation into its own form and way of life.",
+      "when": "Across all the eras the saga visits, from first contact onward.",
+      "how": "Through divergent evolution — Machine People, Hanging People, Grass Giants, Vampires, Reds, and more."
+    },
+    {
+      "name": "The Ringworld",
+      "class": "artifact",
+      "specialty": "The artifact, and the real protagonist: a ribbon of scrith a million miles wide and six hundred million long, spun around a star for gravity, with shadow squares for night and rim walls a thousand miles high. Three million times the surface of the Earth, built by Pak Protectors, failing slowly — and worth an entire genre of wonder. The idea is the hero.",
+      "who": "The artifact itself — a ribbon of scrith a million miles wide and six hundred million long.",
+      "what": "The real protagonist: a star-girdling band spun for gravity, with shadow squares and rim walls.",
+      "where": "Encircling its sun in Known Space, three million times the surface of the Earth.",
+      "why": "It exists as the Pak Protectors' monument to engineering ambition.",
+      "when": "Discovered, explored, and found slowly failing across the tetralogy.",
+      "how": "By spin near 770 miles a second and scrith near the strength of the strong nuclear force — the idea is the hero."
+    }
   ]
 }

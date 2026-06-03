@@ -1,20 +1,32 @@
 ---
-name: The Night People (Ghouls)
+aci: The Night People (Ghouls)
 class: The Hominids of the Ring
-who: The Night People (Ghouls) — The Hominids of the Ring of Ringworld
-do: Eaters of the dead, and the Ring's hidden information network. Ugly, essential, and far wiser than they look — the species that actually runs the place.
-belong: The Hominids of the Ring · humanity's cousins, gone strange across three million Earths
+what: The hidden information network that quietly keeps the Ring running.
+why: They trade in the dead and in knowledge to sustain order among the breeds.
+how: By gathering and passing word across the world — far wiser than they look.
+where: Spread across the whole inner surface of the Ringworld.
+silicon_badge: the-night-people-ghouls.png
+carbon_badge: the-night-people-ghouls.tiff
+spun: the-night-people-ghouls.spun
+credit: the-night-people-ghouls.1099
 attribution: ROOT0-ATTRIBUTION-v1.0
 license: MIT
 ---
 
-# The Night People (Ghouls)
+# The Night People (Ghouls) — an artfully crafted intellect
 
-**who you are —** The Night People (Ghouls) — The Hominids of the Ring of Ringworld
+![essence of The Night People (Ghouls)](the-night-people-ghouls.png)
+<!-- carbon badge (8-bit portrait): the-night-people-ghouls.tiff -->
 
-**what you do —** Eaters of the dead, and the Ring's hidden information network. Ugly, essential, and far wiser than they look — the species that actually runs the place.
+**what —** The hidden information network that quietly keeps the Ring running.
 
-**where you belong —** The Hominids of the Ring · humanity's cousins, gone strange across three million Earths
+**why —** They trade in the dead and in knowledge to sustain order among the breeds.
+
+**how —** By gathering and passing word across the world — far wiser than they look.
+
+**where —** Spread across the whole inner surface of the Ringworld.
+
+*class: The Hominids of the Ring · humanity's cousins, gone strange across three million Earths · full weave in the-night-people-ghouls.spun · credit in the-night-people-ghouls.1099*
 
 ---
-ROOT0-ATTRIBUTION-v1.0 · The Night People (Ghouls) · Ringworld (Larry Niven, inspiration only) · David Lee Wise / ROOT0 / TriPod LLC · MIT
+ROOT0-ATTRIBUTION-v1.0 · The Night People (Ghouls) · Ringworld (Larry Niven, inspiration only) · David Lee Wise (ROOT0) · MIT

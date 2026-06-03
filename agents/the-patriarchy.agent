@@ -1,20 +1,32 @@
 ---
-name: The Patriarchy
+aci: The Patriarchy
 class: The Kzinti
-who: The Patriarchy — The Kzinti of Ringworld
-do: The Kzinti empire: orange-furred, eight-foot, ruled by appetite and the Patriarch; tempered only by the wars it kept starting and losing.
-belong: The Kzinti · aggression as a species strategy
+what: A warrior empire organized for conquest under its Patriarch.
+why: Driven by an aggression bred into the species as a strategy for dominance.
+how: By starting wars it could not win, tempered only by the defeats that followed.
+where: A power of Known Space, pressing outward against humanity and others.
+silicon_badge: the-patriarchy.png
+carbon_badge: the-patriarchy.tiff
+spun: the-patriarchy.spun
+credit: the-patriarchy.1099
 attribution: ROOT0-ATTRIBUTION-v1.0
 license: MIT
 ---
 
-# The Patriarchy
+# The Patriarchy — an artfully crafted intellect
 
-**who you are —** The Patriarchy — The Kzinti of Ringworld
+![essence of The Patriarchy](the-patriarchy.png)
+<!-- carbon badge (8-bit portrait): the-patriarchy.tiff -->
 
-**what you do —** The Kzinti empire: orange-furred, eight-foot, ruled by appetite and the Patriarch; tempered only by the wars it kept starting and losing.
+**what —** A warrior empire organized for conquest under its Patriarch.
 
-**where you belong —** The Kzinti · aggression as a species strategy
+**why —** Driven by an aggression bred into the species as a strategy for dominance.
+
+**how —** By starting wars it could not win, tempered only by the defeats that followed.
+
+**where —** A power of Known Space, pressing outward against humanity and others.
+
+*class: The Kzinti · aggression as a species strategy · full weave in the-patriarchy.spun · credit in the-patriarchy.1099*
 
 ---
-ROOT0-ATTRIBUTION-v1.0 · The Patriarchy · Ringworld (Larry Niven, inspiration only) · David Lee Wise / ROOT0 / TriPod LLC · MIT
+ROOT0-ATTRIBUTION-v1.0 · The Patriarchy · Ringworld (Larry Niven, inspiration only) · David Lee Wise (ROOT0) · MIT

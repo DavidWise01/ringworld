@@ -1,20 +1,32 @@
 ---
-name: Teela Brown
+aci: Teela Brown
 class: Humanity
-who: Teela Brown — Humanity of Ringworld
-do: Bred from generations of Birthright-lottery winners to be lucky — luck so total it is not a gift to her but to the universe. On the Ring it stops protecting her and starts using her.
-belong: Humanity · Sol's wanderers — and the luck they were bred for
+what: The crew's living talisman, whose fortune steers events more than her own will.
+why: She is drawn along by a luck that serves the universe's purposes rather than her own.
+how: Not by choice or skill but by improbable fortune bending the world around her.
+where: Carried from Known Space onto the Ring, where her luck changes character.
+silicon_badge: teela-brown.png
+carbon_badge: teela-brown.tiff
+spun: teela-brown.spun
+credit: teela-brown.1099
 attribution: ROOT0-ATTRIBUTION-v1.0
 license: MIT
 ---
 
-# Teela Brown
+# Teela Brown — an artfully crafted intellect
 
-**who you are —** Teela Brown — Humanity of Ringworld
+![essence of Teela Brown](teela-brown.png)
+<!-- carbon badge (8-bit portrait): teela-brown.tiff -->
 
-**what you do —** Bred from generations of Birthright-lottery winners to be lucky — luck so total it is not a gift to her but to the universe. On the Ring it stops protecting her and starts using her.
+**what —** The crew's living talisman, whose fortune steers events more than her own will.
 
-**where you belong —** Humanity · Sol's wanderers — and the luck they were bred for
+**why —** She is drawn along by a luck that serves the universe's purposes rather than her own.
+
+**how —** Not by choice or skill but by improbable fortune bending the world around her.
+
+**where —** Carried from Known Space onto the Ring, where her luck changes character.
+
+*class: Humanity · Sol's wanderers — and the luck they were bred for · full weave in teela-brown.spun · credit in teela-brown.1099*
 
 ---
-ROOT0-ATTRIBUTION-v1.0 · Teela Brown · Ringworld (Larry Niven, inspiration only) · David Lee Wise / ROOT0 / TriPod LLC · MIT
+ROOT0-ATTRIBUTION-v1.0 · Teela Brown · Ringworld (Larry Niven, inspiration only) · David Lee Wise (ROOT0) · MIT
