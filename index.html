@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RINGWORLD — Muster Roll, by Species</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --space-0:#05070d;
+    --space-1:#0a0e18;
+    --space-2:#0e1420;
+    --ink:#dbe4ef;
+    --ink-dim:#9aa8bd;
+    --scrith:#9fb8d8;
+    --sky:#c9d8ee;
+    --gold:#e0c060;
+    --line:rgba(159,184,216,.16);
+    --hum:#2f6fb0;
+    --pup:#c9a227;
+    --kzin:#b5481f;
+    --pak:#5a6e3a;
+    --hom:#8a6a4a;
+    --maxw:1080px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:
+      radial-gradient(ellipse 120% 70% at 50% -10%, rgba(224,192,96,.10), transparent 60%),
+      radial-gradient(ellipse 90% 50% at 50% 0%, rgba(159,184,216,.08), transparent 55%),
+      linear-gradient(180deg,var(--space-1) 0%, var(--space-0) 60%, #04050a 100%);
+    color:var(--ink);
+    font-family:"Cormorant Garamond",Georgia,serif;
+    font-size:19px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .mono{font-family:"Space Mono",ui-monospace,monospace}
+  a{color:var(--sky);text-decoration:none}
+  a:hover{color:var(--gold)}
+
+  /* ---------- Starfield ---------- */
+  .stars{position:fixed;inset:0;z-index:-2;pointer-events:none;
+    background-image:
+      radial-gradient(1px 1px at 20% 30%, rgba(219,228,239,.9), transparent),
+      radial-gradient(1px 1px at 70% 12%, rgba(219,228,239,.7), transparent),
+      radial-gradient(1px 1px at 40% 70%, rgba(201,216,238,.6), transparent),
+      radial-gradient(1px 1px at 88% 48%, rgba(219,228,239,.8), transparent),
+      radial-gradient(1px 1px at 12% 82%, rgba(159,184,216,.6), transparent),
+      radial-gradient(1.5px 1.5px at 60% 60%, rgba(255,255,255,.5), transparent),
+      radial-gradient(1px 1px at 33% 18%, rgba(219,228,239,.5), transparent),
+      radial-gradient(1px 1px at 80% 78%, rgba(201,216,238,.5), transparent);
+    background-repeat:repeat;background-size:680px 680px;
+    animation:twinkle 9s ease-in-out infinite;
+  }
+  @keyframes twinkle{0%,100%{opacity:.55}50%{opacity:.95}}
+
+  /* ---------- Masthead ---------- */
+  header.masthead{position:relative;padding:0 0 24px;text-align:center;overflow:hidden}
+  .archwrap{position:relative;width:100%;height:340px;margin-bottom:-130px}
+  .archwrap svg{display:block;width:100%;height:100%}
+  .sun-glow{transform-origin:center;animation:sun 7s ease-in-out infinite}
+  @keyframes sun{0%,100%{opacity:.85}50%{opacity:1}}
+
+  .title{
+    font-family:"Orbitron","Cinzel",serif;
+    font-weight:900;
+    letter-spacing:.16em;
+    font-size:clamp(42px,11vw,128px);
+    margin:.1em 0 .05em;
+    color:var(--sky);
+    text-shadow:0 0 24px rgba(224,192,96,.28), 0 0 60px rgba(159,184,216,.18);
+    line-height:.95;
+  }
+  .subtitle{
+    font-family:"Space Mono",monospace;
+    font-size:clamp(11px,1.6vw,14px);
+    letter-spacing:.34em;
+    text-transform:uppercase;
+    color:var(--scrith);
+    margin:0 auto;
+    max-width:760px;
+  }
+  .premise{
+    font-family:"Cormorant Garamond",serif;
+    font-size:clamp(18px,2.3vw,23px);
+    font-style:italic;
+    color:#e6edf6;
+    max-width:760px;
+    margin:34px auto 26px;
+    line-height:1.62;
+  }
+  .premise .pivot{color:var(--gold);font-style:normal}
+  .note{
+    color:var(--ink-dim);
+    font-size:15px;
+    max-width:680px;
+    margin:0 auto 6px;
+  }
+  .by{font-family:"Space Mono",monospace;color:var(--scrith);letter-spacing:.2em;font-size:12px}
+
+  /* ---------- Section scaffolding ---------- */
+  section{padding:54px 0}
+  .eyebrow{
+    font-family:"Space Mono",monospace;
+    font-size:12px;letter-spacing:.4em;text-transform:uppercase;
+    color:var(--scrith);
+    display:flex;align-items:center;gap:14px;
+    margin:0 0 28px;
+  }
+  .eyebrow::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent)}
+
+  /* ---------- Spec sheet ---------- */
+  .specsheet{
+    border:1px solid var(--line);
+    border-radius:8px;
+    background:linear-gradient(180deg, rgba(159,184,216,.05), rgba(5,7,13,.4));
+    box-shadow:0 0 0 1px rgba(224,192,96,.06) inset, 0 24px 60px rgba(0,0,0,.45);
+    overflow:hidden;
+  }
+  .specsheet .plate-head{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:14px 20px;border-bottom:1px solid var(--line);
+    background:rgba(159,184,216,.04);
+    font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.28em;
+    text-transform:uppercase;color:var(--scrith);
+  }
+  .specsheet .plate-head .dot{color:var(--gold)}
+  .specgrid{
+    display:grid;grid-template-columns:repeat(2,1fr);
+  }
+  .specrow{
+    display:flex;flex-direction:column;gap:6px;
+    padding:18px 22px;
+    border-bottom:1px solid var(--line);
+    border-right:1px solid var(--line);
+  }
+  .specrow:nth-child(2n){border-right:none}
+  .specrow .k{
+    font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.24em;
+    text-transform:uppercase;color:var(--ink-dim);
+  }
+  .specrow .v{
+    font-family:"Space Mono",monospace;font-size:clamp(15px,2vw,19px);
+    color:var(--sky);font-weight:700;line-height:1.3;
+  }
+  .specrow.full{grid-column:1 / -1;border-right:none}
+  .specrow.full .v{color:var(--gold)}
+
+  /* ---------- Lineage ---------- */
+  .lineage{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+    border-top:1px solid var(--line);
+    counter-reset:bk;
+  }
+  .book{
+    position:relative;padding:26px 18px 22px;
+    border-right:1px solid var(--line);
+  }
+  .book:last-child{border-right:none}
+  .book::before{
+    content:"";position:absolute;top:-5px;left:24px;width:9px;height:9px;border-radius:50%;
+    background:var(--scrith);box-shadow:0 0 12px rgba(159,184,216,.7);
+  }
+  .book.first::before{background:var(--gold);box-shadow:0 0 16px rgba(224,192,96,.9)}
+  .book .yr{font-family:"Space Mono",monospace;color:var(--gold);font-size:13px;letter-spacing:.2em}
+  .book .bt{font-family:"Cinzel",serif;font-size:19px;color:var(--ink);margin-top:6px;line-height:1.25}
+  .book .award{
+    display:inline-block;margin-top:10px;font-family:"Space Mono",monospace;
+    font-size:10px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--gold);border:1px solid rgba(224,192,96,.4);border-radius:3px;padding:3px 7px;
+  }
+
+  /* ---------- The Roll ---------- */
+  .class-sec{
+    --c:var(--scrith);
+    border-left:3px solid var(--c);
+    padding:0 0 0 26px;
+    margin:0 0 46px;
+  }
+  .class-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:14px;margin-bottom:6px}
+  .class-tag{
+    font-family:"Space Mono",monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--cink,#fff);background:var(--c);border-radius:3px;padding:4px 9px;
+    box-shadow:0 0 18px -4px var(--c);
+  }
+  .class-label{font-family:"Cinzel",serif;font-size:clamp(24px,4vw,34px);color:var(--ink);line-height:1.1}
+  .class-spec{font-family:"Cormorant Garamond",serif;font-style:italic;color:var(--c);font-size:18px;margin:2px 0 22px}
+  .members{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px}
+  .member{
+    border:1px solid var(--line);border-radius:6px;
+    background:linear-gradient(180deg, rgba(159,184,216,.035), rgba(5,7,13,.3));
+    padding:18px 20px;position:relative;overflow:hidden;
+    transition:border-color .25s ease, transform .25s ease;
+  }
+  .member::before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--c);opacity:.5}
+  .member:hover{border-color:var(--c);transform:translateY(-2px)}
+  .member .mname{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:23px;color:#eef3fa;line-height:1.15;margin-bottom:6px}
+  .member .mspec{color:var(--ink-dim);font-size:16.5px;line-height:1.5}
+
+  /* ---------- The Ringworld (artifact) ---------- */
+  .artifact-sec{
+    text-align:center;padding:70px 0 30px;margin-top:20px;
+    border-top:1px solid var(--line);
+  }
+  .ringwrap{width:min(560px,90%);margin:0 auto 6px}
+  .ringwrap svg{display:block;width:100%;height:auto}
+  .ring-rotor{transform-origin:center;animation:ringspin 60s linear infinite}
+  .art-tag{
+    display:inline-block;font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.3em;
+    text-transform:uppercase;color:var(--gold);border:1px solid rgba(224,192,96,.4);
+    border-radius:4px;padding:6px 14px;margin-bottom:14px;
+  }
+  .art-label{font-family:"Cinzel",serif;font-size:clamp(30px,6vw,56px);color:var(--sky);
+    letter-spacing:.04em;text-shadow:0 0 30px rgba(159,184,216,.25);margin:0}
+  .art-spec{font-family:"Cormorant Garamond",serif;font-style:italic;color:var(--scrith);font-size:18px;margin:6px 0 30px}
+  .art-line{font-family:"Cormorant Garamond",serif;font-size:clamp(19px,2.6vw,26px);color:#e6edf6;
+    max-width:720px;margin:0 auto 28px;line-height:1.6}
+  .art-hero{font-family:"Orbitron","Cinzel",serif;font-weight:700;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--gold);font-size:clamp(14px,2.4vw,20px);
+    text-shadow:0 0 24px rgba(224,192,96,.35)}
+
+  /* ---------- Footer ---------- */
+  footer{border-top:1px solid var(--line);padding:44px 0 60px;margin-top:20px}
+  footer .frow{font-family:"Space Mono",monospace;font-size:12.5px;letter-spacing:.06em;color:var(--ink-dim);
+    line-height:1.9;margin-bottom:10px}
+  footer .attr{color:var(--scrith)}
+  footer .siblings a{margin-right:4px}
+  footer .agentline{color:var(--ink-dim);font-style:italic;font-family:"Cormorant Garamond",serif;font-size:16px;letter-spacing:0}
+  footer .agentline code{font-family:"Space Mono",monospace;color:var(--gold);font-size:13px}
+  footer .disclaimer{color:#6e7c91;font-size:11.5px;letter-spacing:.08em}
+
+  /* ---------- Responsive ---------- */
+  @media(max-width:760px){
+    body{font-size:18px}
+    .specgrid{grid-template-columns:1fr}
+    .specrow{border-right:none!important}
+    .lineage{grid-template-columns:1fr}
+    .book{border-right:none;border-bottom:1px solid var(--line)}
+    .book:last-child{border-bottom:none}
+    .members{grid-template-columns:1fr}
+    .archwrap{height:200px;margin-bottom:-70px}
+  }
+
+  @media(prefers-reduced-motion:reduce){
+    .stars,.sun-glow,.ring-rotor{animation:none!important}
+  }
+</style>
+</head>
+<body>
+<div class="stars" aria-hidden="true"></div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="archwrap" aria-hidden="true">
+      <!-- Ringworld arch: a great band sweeping across the sky, rising on both sides, sun at center -->
+      <svg viewBox="0 0 1080 340" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#fff6d8"/>
+            <stop offset="35%" stop-color="#e0c060"/>
+            <stop offset="100%" stop-color="rgba(224,192,96,0)"/>
+          </radialGradient>
+          <linearGradient id="band" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#c9d8ee" stop-opacity=".9"/>
+            <stop offset="100%" stop-color="#9fb8d8" stop-opacity=".25"/>
+          </linearGradient>
+          <linearGradient id="bandfade" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#9fb8d8" stop-opacity="0"/>
+            <stop offset="20%" stop-color="#9fb8d8" stop-opacity=".8"/>
+            <stop offset="50%" stop-color="#c9d8ee" stop-opacity="1"/>
+            <stop offset="80%" stop-color="#9fb8d8" stop-opacity=".8"/>
+            <stop offset="100%" stop-color="#9fb8d8" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <!-- the arch: two near-parallel curves rising to both edges (the far side of the Ring overhead) -->
+        <path d="M -40 300 Q 540 70 1120 300" fill="none" stroke="url(#bandfade)" stroke-width="2.2"/>
+        <path d="M -40 330 Q 540 120 1120 330" fill="none" stroke="url(#bandfade)" stroke-width="3.4"/>
+        <!-- subtle filled band between the two arcs -->
+        <path d="M -40 300 Q 540 70 1120 300 L 1120 330 Q 540 120 -40 330 Z" fill="url(#band)" opacity=".10"/>
+        <!-- shadow-square ticks along the arch -->
+        <g stroke="#05070d" stroke-width="6" opacity=".55">
+          <line x1="250" y1="170" x2="256" y2="158"/>
+          <line x1="370" y1="135" x2="376" y2="124"/>
+          <line x1="540" y1="118" x2="540" y2="106"/>
+          <line x1="710" y1="135" x2="704" y2="124"/>
+          <line x1="830" y1="170" x2="824" y2="158"/>
+        </g>
+        <!-- sun at center -->
+        <circle class="sun-glow" cx="540" cy="150" r="120" fill="url(#sun)"/>
+        <circle cx="540" cy="150" r="16" fill="#fff6d8"/>
+        <circle cx="540" cy="150" r="26" fill="none" stroke="#e0c060" stroke-width="1" opacity=".5"/>
+      </svg>
+    </div>
+
+    <h1 class="title">RINGWORLD</h1>
+    <p class="subtitle" id="subtitle"></p>
+    <p class="premise" id="premise"></p>
+    <p class="note" id="note"></p>
+    <p class="by" id="by"></p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- SPEC SHEET -->
+  <section id="spec">
+    <p class="eyebrow">The Spec Sheet — Instrument Plate</p>
+    <div class="specsheet">
+      <div class="plate-head">
+        <span><span class="dot">●</span>&nbsp; STRUCTURAL READOUT</span>
+        <span>SCRITH-CLASS MEGASTRUCTURE</span>
+      </div>
+      <div class="specgrid" id="specgrid"></div>
+    </div>
+  </section>
+
+  <!-- LINEAGE -->
+  <section id="lineage">
+    <p class="eyebrow">The Lineage — 1970–2004</p>
+    <div class="lineage" id="lineageGrid"></div>
+  </section>
+
+  <!-- THE ROLL -->
+  <section id="roll">
+    <p class="eyebrow">The Roll — Sorted by Species</p>
+    <div id="rollHost"></div>
+  </section>
+
+  <!-- ARTIFACT -->
+  <section class="artifact-sec" id="artifact" aria-label="The Ringworld">
+    <div class="ringwrap" aria-hidden="true">
+      <svg viewBox="0 0 560 200">
+        <defs>
+          <radialGradient id="sun2" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#fff6d8"/>
+            <stop offset="45%" stop-color="#e0c060"/>
+            <stop offset="100%" stop-color="rgba(224,192,96,0)"/>
+          </radialGradient>
+          <linearGradient id="ringband" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#9fb8d8" stop-opacity=".15"/>
+            <stop offset="50%" stop-color="#c9d8ee" stop-opacity=".95"/>
+            <stop offset="100%" stop-color="#9fb8d8" stop-opacity=".15"/>
+          </linearGradient>
+        </defs>
+        <circle cx="280" cy="100" r="70" fill="url(#sun2)"/>
+        <g class="ring-rotor">
+          <!-- the ring seen at a shallow angle -->
+          <ellipse cx="280" cy="100" rx="250" ry="62" fill="none" stroke="url(#ringband)" stroke-width="9"/>
+          <ellipse cx="280" cy="100" rx="250" ry="62" fill="none" stroke="#9fb8d8" stroke-width="1" opacity=".35"/>
+          <!-- shadow square ticks -->
+          <g stroke="#05070d" stroke-width="6" opacity=".5">
+            <line x1="30" y1="100" x2="44" y2="100"/>
+            <line x1="516" y1="100" x2="530" y2="100"/>
+            <line x1="280" y1="38" x2="280" y2="50"/>
+            <line x1="280" y1="150" x2="280" y2="162"/>
+          </g>
+        </g>
+        <circle cx="280" cy="100" r="9" fill="#fff6d8"/>
+      </svg>
+    </div>
+    <span class="art-tag" id="artTag"></span>
+    <h2 class="art-label" id="artLabel"></h2>
+    <p class="art-spec" id="artSpec"></p>
+    <p class="art-line" id="artLine"></p>
+    <p class="art-hero">the idea is the hero.</p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="frow attr">ROOT0-ATTRIBUTION-v1.0 · Ringworld · David Lee Wise / ROOT0 / TriPod LLC · MIT</div>
+    <div class="frow">repo: <a href="https://github.com/DavidWise01/ringworld">github.com/DavidWise01/ringworld</a></div>
+    <div class="frow siblings" id="siblings">see also: </div>
+    <div class="frow agentline">every member carries a <code>.agent</code> — who you are · what you do · where you belong — in <code>agents/</code></div>
+    <div class="frow disclaimer">Characters by Larry Niven, referenced as inspiration only.</div>
+  </div>
+</footer>
+
+<script>
+"use strict";
+
+/* ---------- Embedded roster (source of truth, verbatim) ---------- */
+const ROSTER = {
+  "company": "Ringworld",
+  "subtitle": "Known Space — sorted not by morality but by species",
+  "author": "Larry Niven",
+  "premise": "A band of matter a million miles wide and six hundred million long, spun around a sun for gravity. Three million times the surface of the Earth. Built by Pak Protectors, found by a tourist, a coward, a warrior, and a woman bred for luck. The 90° pivot: this roll sorts the cast by kind — for in Known Space, biology is destiny — and sets the artifact itself apart, because the idea is the hero.",
+  "note": "The full Ringworld tetralogy (1970–2004) sorted by species, with the Ringworld set apart as the artifact-protagonist. The Fleet of Worlds prequels (with Edward M. Lerner) sit alongside as companion Known Space. roster.json is the source of truth; characters by Larry Niven, inspiration only.",
+  "lineage": [
+    { "t": "Ringworld",              "y": 1970 },
+    { "t": "The Ringworld Engineers","y": 1980 },
+    { "t": "The Ringworld Throne",   "y": 1996 },
+    { "t": "Ringworld's Children",   "y": 2004 }
+  ],
+  "specs": {
+    "width": "~1,000,000 miles",
+    "circumference": "~600,000,000 miles",
+    "surface": "~3,000,000 × Earth",
+    "spin": "≈770 mi/s → ~0.992 g",
+    "walls": "rim walls ~1,000 miles high",
+    "night": "shadow squares ringing the sun",
+    "material": "scrith — tensile strength near the strong nuclear force"
+  },
+  "classes": [
+    { "id": "humanity",   "label": "Humanity",            "spec": "Sol's wanderers — and the luck they were bred for", "color": "#2f6fb0", "ink": "#fff" },
+    { "id": "puppeteers", "label": "Pierson's Puppeteers","spec": "cowardice raised to statecraft",     "color": "#c9a227", "ink": "#1a1a1a" },
+    { "id": "kzinti",     "label": "The Kzinti",          "spec": "aggression as a species strategy",   "color": "#b5481f", "ink": "#fff" },
+    { "id": "pak",        "label": "The Pak Protectors",  "spec": "intelligence in service of kin — the builders", "color": "#5a6e3a", "ink": "#fff" },
+    { "id": "hominids",   "label": "The Hominids of the Ring", "spec": "humanity's cousins, gone strange across three million Earths", "color": "#8a6a4a", "ink": "#fff" },
+    { "id": "artifact",   "label": "The Ringworld",       "spec": "the artifact · the real protagonist", "color": "#9fb8d8", "ink": "#0a0f18" }
+  ],
+  "members": [
+    { "name": "Louis Wu",            "class": "humanity", "specialty": "Two hundred years old and bored of it; explorer, peacemaker, the man who has seen everything and goes anyway. The eyes through which we see the Ring — curious, decent, and a little tired of being right." },
+    { "name": "Teela Brown",         "class": "humanity", "specialty": "Bred from generations of Birthright-lottery winners to be lucky — luck so total it is not a gift to her but to the universe. On the Ring it stops protecting her and starts using her." },
+    { "name": "Nessus",              "class": "puppeteers", "specialty": "The Puppeteer who organized the expedition; clinically 'insane' among his kind — which is to say, brave enough to leave the Fleet. Two heads, three legs, and a galaxy of schemes." },
+    { "name": "The Hindmost",        "class": "puppeteers", "specialty": "Leader-in-exile of the Puppeteers; rides the Ring's edge pulling strings from safety; cowardice perfected into survival and statecraft. (His kind bred human luck itself.)" },
+    { "name": "Speaker-to-Animals (Chmeee)", "class": "kzinti", "specialty": "A Kzin diplomat-warrior — the rank is an insult — fierce and honorable in his fashion. On the Ring he earns a full name, Chmeee: the rarest honor among the felines who lost four wars to monkeys." },
+    { "name": "The Patriarchy",      "class": "kzinti", "specialty": "The Kzinti empire: orange-furred, eight-foot, ruled by appetite and the Patriarch; tempered only by the wars it kept starting and losing." },
+    { "name": "Tunesmith",           "class": "pak", "specialty": "The Ringworld Protector of the Children era; the engineer-mind that takes the failing Ring's fate in hand — cold, brilliant, and utterly beyond human scale." },
+    { "name": "The Pak",            "class": "pak", "specialty": "The species whose Protectors built the Ringworld. Tree-of-life turns adult to Protector — deathless, sexless, superhumanly smart, and incapable of caring for anything but their own bloodline. The builders, and the warning." },
+    { "name": "Halrloprillalar (Prill)", "class": "hominids", "specialty": "Ship's woman of the fallen City Builder civilization; survivor of the Ring's long collapse; guide, lover, and keeper of knowledge from before the Fall of the Cities." },
+    { "name": "The Night People (Ghouls)", "class": "hominids", "specialty": "Eaters of the dead, and the Ring's hidden information network. Ugly, essential, and far wiser than they look — the species that actually runs the place." },
+    { "name": "The Breeds of the Ring", "class": "hominids", "specialty": "A thousand hominid species evolved across three million Earths — Machine People, Hanging People, Grass Giants, Vampires, Reds — humanity's cousins, each gone strange in its own long isolation." },
+    { "name": "The Ringworld",       "class": "artifact", "specialty": "The artifact, and the real protagonist: a ribbon of scrith a million miles wide and six hundred million long, spun around a star for gravity, with shadow squares for night and rim walls a thousand miles high. Three million times the surface of the Earth, built by Pak Protectors, failing slowly — and worth an entire genre of wonder. The idea is the hero." }
+  ]
+};
+
+/* ---------- helpers ---------- */
+function esc(s){
+  return String(s == null ? "" : s)
+    .replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;").replace(/'/g,"&#39;");
+}
+function $(id){ return document.getElementById(id); }
+
+/* ---------- masthead text ---------- */
+$("subtitle").textContent = ROSTER.subtitle;
+(function(){
+  // Highlight the "90° pivot" phrase inside the premise without unsafe HTML.
+  const p = ROSTER.premise;
+  const marker = "The 90° pivot:";
+  const idx = p.indexOf(marker);
+  const host = $("premise");
+  if(idx >= 0){
+    host.appendChild(document.createTextNode(p.slice(0, idx)));
+    const span = document.createElement("span");
+    span.className = "pivot";
+    span.textContent = marker;
+    host.appendChild(span);
+    host.appendChild(document.createTextNode(p.slice(idx + marker.length)));
+  } else {
+    host.textContent = p;
+  }
+})();
+$("note").textContent = ROSTER.note;
+$("by").textContent = "— " + ROSTER.author;
+
+/* ---------- spec sheet ---------- */
+(function(){
+  const s = ROSTER.specs;
+  const rows = [
+    ["Width", s.width, false],
+    ["Circumference", s.circumference, false],
+    ["Surface Area", s.surface, false],
+    ["Spin / Gravity", s.spin, false],
+    ["Rim Walls", s.walls, false],
+    ["Night", s.night, false],
+    ["Material", s.material, true]
+  ];
+  $("specgrid").innerHTML = rows.map(function(r){
+    return '<div class="specrow' + (r[2] ? ' full' : '') + '">' +
+             '<span class="k">' + esc(r[0]) + '</span>' +
+             '<span class="v">' + esc(r[1]) + '</span>' +
+           '</div>';
+  }).join("");
+})();
+
+/* ---------- lineage ---------- */
+(function(){
+  $("lineageGrid").innerHTML = ROSTER.lineage.map(function(b, i){
+    const first = (i === 0);
+    const award = first ? '<span class="award">Hugo + Nebula</span>' : '';
+    return '<div class="book' + (first ? ' first' : '') + '">' +
+             '<div class="yr">' + esc(b.y) + '</div>' +
+             '<div class="bt">' + esc(b.t) + '</div>' +
+             award +
+           '</div>';
+  }).join("");
+})();
+
+/* ---------- the roll (classes in file order, excluding artifact) ---------- */
+(function(){
+  const host = $("rollHost");
+  const classes = ROSTER.classes.filter(function(c){ return c.id !== "artifact"; });
+  host.innerHTML = classes.map(function(c){
+    const mem = ROSTER.members.filter(function(m){ return m.class === c.id; });
+    const cards = mem.map(function(m){
+      return '<div class="member">' +
+               '<div class="mname">' + esc(m.name) + '</div>' +
+               '<div class="mspec">' + esc(m.specialty) + '</div>' +
+             '</div>';
+    }).join("");
+    return '<div class="class-sec" style="--c:' + esc(c.color) + ';">' +
+             '<div class="class-head">' +
+               '<span class="class-tag" style="--cink:' + esc(c.ink) + ';">' + esc(c.id) + '</span>' +
+               '<span class="class-label">' + esc(c.label) + '</span>' +
+             '</div>' +
+             '<div class="class-spec">' + esc(c.spec) + '</div>' +
+             '<div class="members">' + cards + '</div>' +
+           '</div>';
+  }).join("");
+})();
+
+/* ---------- artifact (final class) ---------- */
+(function(){
+  const c = ROSTER.classes.find(function(x){ return x.id === "artifact"; });
+  const m = ROSTER.members.find(function(x){ return x.class === "artifact"; });
+  if(c){
+    $("artTag").textContent = c.id;
+    $("artLabel").textContent = c.label;
+    $("artSpec").textContent = c.spec;
+  }
+  if(m){
+    $("artLine").textContent = m.specialty;
+  }
+})();
+
+/* ---------- footer siblings ---------- */
+(function(){
+  const sibs = ["Bridge Burners","Black Company","Wheel of Time","Gap Cycle","White Gold Wielder","Riverworld"];
+  const host = $("siblings");
+  sibs.forEach(function(name, i){
+    const a = document.createElement("a");
+    a.href = "https://github.com/DavidWise01/" + name.toLowerCase().replace(/\s+/g, "-");
+    a.textContent = name;
+    host.appendChild(a);
+    if(i < sibs.length - 1) host.appendChild(document.createTextNode(" · "));
+  });
+})();
+</script>
+</body>
+</html>

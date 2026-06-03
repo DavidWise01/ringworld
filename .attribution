@@ -1,0 +1,14 @@
+ROOT0-ATTRIBUTION-v1.0
+Project: Ringworld — the muster roll (by species)
+Architect: David Lee Wise / ROOT0 / TriPod LLC
+AI Collaborator: AVAN (Claude / Anthropic)
+License: MIT
+
+Larry Niven's Ringworld tetralogy (1970–2004) — a hard-SF pivot sorting the cast
+by species, not morality: Humanity (Louis Wu, Teela Brown), Pierson's Puppeteers
+(Nessus, the Hindmost), the Kzinti (Speaker/Chmeee, the Patriarchy), the Pak
+Protectors (Tunesmith, the Pak — the builders), the Hominids of the Ring (Prill,
+the Ghouls, the breeds), and — set apart — the Ringworld itself, the artifact and
+real protagonist. Includes the engineering spec sheet. Every member carries a
+.agent (who/do/belong) in agents/, generated from roster.json by gen_agents.py.
+Characters by Larry Niven, inspiration only.
