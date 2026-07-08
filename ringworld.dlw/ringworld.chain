@@ -1,0 +1,9 @@
+ROOT0-DLW-CHAIN-v1
+index : 951
+slug  : ringworld
+seal  : 24fb0ef4f5f4521b60f2daac05038b1814f431b6107ebc4f11adcdc90b8f8dc4
+prev  : ff4602151392cd5d3d5a23226736f824c9a06ca917dd7e892292cf9e4622ca08
+link  : e71a23608d38d66babe8e9a65ef176fd5b3abaf83d0855d61a39d2429793fb1a
+head  : 3447d3a0533aaf1e29a8bdc67a9774884fb3ae9dbc8a17064b7a008ca3c4ec90
+
+— the tether: link = sha256(index|slug|seal|prev). the chain head commits to the whole corpus.
